@@ -12,6 +12,7 @@
 		B842F2CE2B432EFE00907F0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2CD2B432EFE00907F0C /* ViewController.swift */; };
 		B842F2D32B432F0000907F0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B842F2D22B432F0000907F0C /* Assets.xcassets */; };
 		B842F2D62B432F0000907F0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B842F2D42B432F0000907F0C /* LaunchScreen.storyboard */; };
+		B842F2E22B4333A400907F0C /* UICustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2E12B4333A400907F0C /* UICustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B842F2D22B432F0000907F0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B842F2D52B432F0000907F0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B842F2D72B432F0000907F0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B842F2E12B4333A400907F0C /* UICustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,47 @@
 		B842F2C82B432EFE00907F0C /* BillSplitteriOS */ = {
 			isa = PBXGroup;
 			children = (
-				B842F2C92B432EFE00907F0C /* AppDelegate.swift */,
-				B842F2CB2B432EFE00907F0C /* SceneDelegate.swift */,
-				B842F2CD2B432EFE00907F0C /* ViewController.swift */,
-				B842F2D22B432F0000907F0C /* Assets.xcassets */,
-				B842F2D42B432F0000907F0C /* LaunchScreen.storyboard */,
+				B842F2E02B43339400907F0C /* Views */,
+				B842F2DF2B43331A00907F0C /* Model */,
+				B842F2DE2B43331400907F0C /* Controllers list */,
+				B842F2DD2B4332F200907F0C /* Support */,
 				B842F2D72B432F0000907F0C /* Info.plist */,
 			);
 			path = BillSplitteriOS;
+			sourceTree = "<group>";
+		};
+		B842F2DD2B4332F200907F0C /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				B842F2D22B432F0000907F0C /* Assets.xcassets */,
+				B842F2D42B432F0000907F0C /* LaunchScreen.storyboard */,
+				B842F2C92B432EFE00907F0C /* AppDelegate.swift */,
+				B842F2CB2B432EFE00907F0C /* SceneDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		B842F2DE2B43331400907F0C /* Controllers list */ = {
+			isa = PBXGroup;
+			children = (
+				B842F2CD2B432EFE00907F0C /* ViewController.swift */,
+			);
+			path = "Controllers list";
+			sourceTree = "<group>";
+		};
+		B842F2DF2B43331A00907F0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B842F2E02B43339400907F0C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B842F2E12B4333A400907F0C /* UICustomTextField.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B842F2E22B4333A400907F0C /* UICustomTextField.swift in Sources */,
 				B842F2CE2B432EFE00907F0C /* ViewController.swift in Sources */,
 				B842F2CA2B432EFE00907F0C /* AppDelegate.swift in Sources */,
 				B842F2CC2B432EFE00907F0C /* SceneDelegate.swift in Sources */,
