@@ -14,6 +14,12 @@
 		B842F2D62B432F0000907F0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B842F2D42B432F0000907F0C /* LaunchScreen.storyboard */; };
 		B842F2E22B4333A400907F0C /* UICustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2E12B4333A400907F0C /* UICustomTextField.swift */; };
 		B842F2E52B4333FD00907F0C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2E42B4333FD00907F0C /* UIView+Extension.swift */; };
+		B842F2E72B43361000907F0C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2E62B43361000907F0C /* UIColor+Extension.swift */; };
+		B842F2E92B43363100907F0C /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2E82B43363100907F0C /* UILabel+Extension.swift */; };
+		B842F2EB2B43365500907F0C /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2EA2B43365500907F0C /* UITextField+Extension.swift */; };
+		B842F2ED2B43367100907F0C /* SetupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2EC2B43367100907F0C /* SetupViews.swift */; };
+		B842F2EF2B43369C00907F0C /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2EE2B43369C00907F0C /* UIButton+Extension.swift */; };
+		B842F2F12B4336C900907F0C /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2F02B4336C900907F0C /* UIStackView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		B842F2D72B432F0000907F0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B842F2E12B4333A400907F0C /* UICustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomTextField.swift; sourceTree = "<group>"; };
 		B842F2E42B4333FD00907F0C /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		B842F2E62B43361000907F0C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		B842F2E82B43363100907F0C /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		B842F2EA2B43365500907F0C /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		B842F2EC2B43367100907F0C /* SetupViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViews.swift; sourceTree = "<group>"; };
+		B842F2EE2B43369C00907F0C /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		B842F2F02B4336C900907F0C /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +118,12 @@
 			isa = PBXGroup;
 			children = (
 				B842F2E42B4333FD00907F0C /* UIView+Extension.swift */,
+				B842F2E62B43361000907F0C /* UIColor+Extension.swift */,
+				B842F2E82B43363100907F0C /* UILabel+Extension.swift */,
+				B842F2EA2B43365500907F0C /* UITextField+Extension.swift */,
+				B842F2EC2B43367100907F0C /* SetupViews.swift */,
+				B842F2EE2B43369C00907F0C /* UIButton+Extension.swift */,
+				B842F2F02B4336C900907F0C /* UIStackView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -183,8 +201,14 @@
 				B842F2E22B4333A400907F0C /* UICustomTextField.swift in Sources */,
 				B842F2CE2B432EFE00907F0C /* ViewController.swift in Sources */,
 				B842F2CA2B432EFE00907F0C /* AppDelegate.swift in Sources */,
+				B842F2EF2B43369C00907F0C /* UIButton+Extension.swift in Sources */,
+				B842F2E92B43363100907F0C /* UILabel+Extension.swift in Sources */,
+				B842F2E72B43361000907F0C /* UIColor+Extension.swift in Sources */,
+				B842F2EB2B43365500907F0C /* UITextField+Extension.swift in Sources */,
 				B842F2E52B4333FD00907F0C /* UIView+Extension.swift in Sources */,
+				B842F2ED2B43367100907F0C /* SetupViews.swift in Sources */,
 				B842F2CC2B432EFE00907F0C /* SceneDelegate.swift in Sources */,
+				B842F2F12B4336C900907F0C /* UIStackView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
