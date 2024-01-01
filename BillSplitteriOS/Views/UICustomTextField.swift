@@ -6,6 +6,23 @@
 //
 
 import UIKit
+enum FilterStatus {
+    case open
+    case closed
+}
+enum TypeMenu {
+    case login
+    case pass
+    case button
+    
+    var string: String {
+        switch self {
+        case .login: return "Login"
+        case .pass: return "Password"
+        case .button: return "Choose"
+        }
+    }
+}
 @objc protocol UICustomTextFieldDelegate: AnyObject {
     @objc optional func customTextField(_ customTextField:UICustomTextField, changed text: String?)
     @objc optional  func customTextField(_ customTextField:UICustomTextField, didBegin text: String?)
@@ -14,7 +31,7 @@ import UIKit
 }
 class UICustomTextField: UIView, UITextFieldDelegate, UIGestureRecognizerDelegate {
     weak var delegate: UICustomTextFieldDelegate?
-    private lazy var view = UIView(.custom.lightGray)
+    private lazy var view = UIView(.lightGray)
     private lazy var typeLabel: UILabel = UILabel(text: "", ofSize: 10, weight: .regular, color: .custom.gray)
     private lazy var starLabel: UILabel = UILabel(text: "*", ofSize: 10, weight: .regular, color: .custom.red)
     private lazy var errorLabel: UILabel = UILabel(text: "", ofSize: 12, weight: .regular, color: .custom.red)
@@ -22,7 +39,7 @@ class UICustomTextField: UIView, UITextFieldDelegate, UIGestureRecognizerDelegat
     private lazy var textField:UITextField! = {
         let textField = UITextField()
         textField.textColor = .black
-        textField.font = .montserratFont(ofSize: 15, weight: .regular)
+        textField.font = .systemFont(ofSize: 15, weight: .regular)
         textField.backgroundColor =  .clear
         textField.placeholderColor = .custom.gray3
         textField.indent(size: 16)
@@ -136,12 +153,12 @@ class UICustomTextField: UIView, UITextFieldDelegate, UIGestureRecognizerDelegat
         self.addSubview(stackView)
         stackView.fullConstraint()
         errorLabel.numberOfLines = 0
-        typeLabel.font = .robotoFont(ofSize: 14)
+        typeLabel.font = .systemFont(ofSize: 14)
         typeLabel.textColor = UIColor.custom.subtitleColor
         
         button.showsMenuAsPrimaryAction = true
         button.contentHorizontalAlignment = .left
-        button.titleLabel?.font = .robotoFont(ofSize: 16, weight: .regular)
+        button.titleLabel?.font = .systemFont(ofSize: 16, weight: .regular)
         NSLayoutConstraint.activate([
             view.heightAnchor.constraint(equalToConstant: 44.0),
             errorLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 12),
