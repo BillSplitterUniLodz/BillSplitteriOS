@@ -20,6 +20,19 @@
 		B842F2ED2B43367100907F0C /* SetupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2EC2B43367100907F0C /* SetupViews.swift */; };
 		B842F2EF2B43369C00907F0C /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2EE2B43369C00907F0C /* UIButton+Extension.swift */; };
 		B842F2F12B4336C900907F0C /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2F02B4336C900907F0C /* UIStackView+Extension.swift */; };
+		B842F2F42B433FAD00907F0C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2F32B433FAD00907F0C /* Network.swift */; };
+		B842F2F62B43400D00907F0C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2F52B43400D00907F0C /* API.swift */; };
+		B842F2F92B43405700907F0C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2F82B43405700907F0C /* Result.swift */; };
+		B842F2FB2B43406700907F0C /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2FA2B43406700907F0C /* StatusCode.swift */; };
+		B842F2FD2B43418200907F0C /* AuthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2FC2B43418200907F0C /* AuthApp.swift */; };
+		B842F2FF2B4341F400907F0C /* AuthDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2FE2B4341F400907F0C /* AuthDataModel.swift */; };
+		B842F3012B4344E900907F0C /* Auth+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F3002B4344E900907F0C /* Auth+Network.swift */; };
+		B842F3032B43484B00907F0C /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F3022B43484B00907F0C /* GroupsViewController.swift */; };
+		B842F3052B43550C00907F0C /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F3042B43550C00907F0C /* Group.swift */; };
+		B842F3072B43553700907F0C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F3062B43553700907F0C /* User.swift */; };
+		B842F3092B4355EE00907F0C /* Groups+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F3082B4355EE00907F0C /* Groups+Network.swift */; };
+		B842F30C2B435BD000907F0C /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F30B2B435BD000907F0C /* GroupCell.swift */; };
+		B842F30F2B435DE800907F0C /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F30E2B435DE800907F0C /* TransactionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +51,19 @@
 		B842F2EC2B43367100907F0C /* SetupViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViews.swift; sourceTree = "<group>"; };
 		B842F2EE2B43369C00907F0C /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		B842F2F02B4336C900907F0C /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		B842F2F32B433FAD00907F0C /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		B842F2F52B43400D00907F0C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		B842F2F82B43405700907F0C /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		B842F2FA2B43406700907F0C /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
+		B842F2FC2B43418200907F0C /* AuthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApp.swift; sourceTree = "<group>"; };
+		B842F2FE2B4341F400907F0C /* AuthDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataModel.swift; sourceTree = "<group>"; };
+		B842F3002B4344E900907F0C /* Auth+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Auth+Network.swift"; sourceTree = "<group>"; };
+		B842F3022B43484B00907F0C /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		B842F3042B43550C00907F0C /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		B842F3062B43553700907F0C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B842F3082B4355EE00907F0C /* Groups+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Groups+Network.swift"; sourceTree = "<group>"; };
+		B842F30B2B435BD000907F0C /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		B842F30E2B435DE800907F0C /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,12 +96,14 @@
 		B842F2C82B432EFE00907F0C /* BillSplitteriOS */ = {
 			isa = PBXGroup;
 			children = (
+				B842F2F22B433FA200907F0C /* Network */,
 				B842F2E32B4333ED00907F0C /* Extensions */,
 				B842F2E02B43339400907F0C /* Views */,
 				B842F2DF2B43331A00907F0C /* Model */,
 				B842F2DE2B43331400907F0C /* Controllers list */,
 				B842F2DD2B4332F200907F0C /* Support */,
 				B842F2D72B432F0000907F0C /* Info.plist */,
+				B842F2FC2B43418200907F0C /* AuthApp.swift */,
 			);
 			path = BillSplitteriOS;
 			sourceTree = "<group>";
@@ -94,6 +122,8 @@
 		B842F2DE2B43331400907F0C /* Controllers list */ = {
 			isa = PBXGroup;
 			children = (
+				B842F30D2B435DD800907F0C /* Transactions List */,
+				B842F30A2B435B8C00907F0C /* Groups List */,
 				B842F2CD2B432EFE00907F0C /* ViewController.swift */,
 			);
 			path = "Controllers list";
@@ -102,6 +132,9 @@
 		B842F2DF2B43331A00907F0C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B842F2FE2B4341F400907F0C /* AuthDataModel.swift */,
+				B842F3042B43550C00907F0C /* Group.swift */,
+				B842F3062B43553700907F0C /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,6 +159,44 @@
 				B842F2F02B4336C900907F0C /* UIStackView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B842F2F22B433FA200907F0C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B842F2F72B43404700907F0C /* Settings */,
+				B842F2F32B433FAD00907F0C /* Network.swift */,
+				B842F3002B4344E900907F0C /* Auth+Network.swift */,
+				B842F3082B4355EE00907F0C /* Groups+Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B842F2F72B43404700907F0C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B842F2F52B43400D00907F0C /* API.swift */,
+				B842F2F82B43405700907F0C /* Result.swift */,
+				B842F2FA2B43406700907F0C /* StatusCode.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B842F30A2B435B8C00907F0C /* Groups List */ = {
+			isa = PBXGroup;
+			children = (
+				B842F3022B43484B00907F0C /* GroupsViewController.swift */,
+				B842F30B2B435BD000907F0C /* GroupCell.swift */,
+			);
+			path = "Groups List";
+			sourceTree = "<group>";
+		};
+		B842F30D2B435DD800907F0C /* Transactions List */ = {
+			isa = PBXGroup;
+			children = (
+				B842F30E2B435DE800907F0C /* TransactionsViewController.swift */,
+			);
+			path = "Transactions List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,15 +271,28 @@
 			files = (
 				B842F2E22B4333A400907F0C /* UICustomTextField.swift in Sources */,
 				B842F2CE2B432EFE00907F0C /* ViewController.swift in Sources */,
+				B842F2F42B433FAD00907F0C /* Network.swift in Sources */,
+				B842F3052B43550C00907F0C /* Group.swift in Sources */,
+				B842F3032B43484B00907F0C /* GroupsViewController.swift in Sources */,
 				B842F2CA2B432EFE00907F0C /* AppDelegate.swift in Sources */,
+				B842F3092B4355EE00907F0C /* Groups+Network.swift in Sources */,
+				B842F2F92B43405700907F0C /* Result.swift in Sources */,
+				B842F30C2B435BD000907F0C /* GroupCell.swift in Sources */,
 				B842F2EF2B43369C00907F0C /* UIButton+Extension.swift in Sources */,
+				B842F3012B4344E900907F0C /* Auth+Network.swift in Sources */,
 				B842F2E92B43363100907F0C /* UILabel+Extension.swift in Sources */,
 				B842F2E72B43361000907F0C /* UIColor+Extension.swift in Sources */,
+				B842F2FF2B4341F400907F0C /* AuthDataModel.swift in Sources */,
+				B842F30F2B435DE800907F0C /* TransactionsViewController.swift in Sources */,
 				B842F2EB2B43365500907F0C /* UITextField+Extension.swift in Sources */,
+				B842F2F62B43400D00907F0C /* API.swift in Sources */,
 				B842F2E52B4333FD00907F0C /* UIView+Extension.swift in Sources */,
+				B842F2FD2B43418200907F0C /* AuthApp.swift in Sources */,
+				B842F2FB2B43406700907F0C /* StatusCode.swift in Sources */,
 				B842F2ED2B43367100907F0C /* SetupViews.swift in Sources */,
 				B842F2CC2B432EFE00907F0C /* SceneDelegate.swift in Sources */,
 				B842F2F12B4336C900907F0C /* UIStackView+Extension.swift in Sources */,
+				B842F3072B43553700907F0C /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

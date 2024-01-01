@@ -31,7 +31,7 @@ enum TypeMenu {
 }
 class UICustomTextField: UIView, UITextFieldDelegate, UIGestureRecognizerDelegate {
     weak var delegate: UICustomTextFieldDelegate?
-    private lazy var view = UIView(.lightGray)
+    private lazy var view = UIView(.custom.lightGray)
     private lazy var typeLabel: UILabel = UILabel(text: "", ofSize: 10, weight: .regular, color: .custom.gray)
     private lazy var starLabel: UILabel = UILabel(text: "*", ofSize: 10, weight: .regular, color: .custom.red)
     private lazy var errorLabel: UILabel = UILabel(text: "", ofSize: 12, weight: .regular, color: .custom.red)
