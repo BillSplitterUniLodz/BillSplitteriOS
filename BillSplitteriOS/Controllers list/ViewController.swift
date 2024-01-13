@@ -13,7 +13,6 @@ final class ViewController: UIViewController {
     private let loginTextField = UICustomTextField(title: "Username", star: true, text: nil, placeholder: "Username", height: 60, type: .login)
     private let emailTextField = UICustomTextField(title: "Email", star: true, text: nil, placeholder: "Email", height: 60, type: .login)
     private let passwordTextField = UICustomTextField(title: "Password", star: true, text: nil, placeholder: "Password", height: 60, type: .pass)
-    private let repeatPasswordTextField = UICustomTextField(title: "Repeat password", star: true, text: nil, placeholder: "Password", height: 60, type: .pass)
     private let nextButton = UIButton(backgroundColor: .custom.buttonBackgroundColor, textColor: .white, text: "Next", radius: 12)
     
     override func viewDidLoad() {
@@ -26,10 +25,9 @@ final class ViewController: UIViewController {
     private func initialize() {
         backgroundView.shadow()
         SetupViews.addViewEndRemoveAutoresizingMask(superView: view, view: backgroundView)
-        repeatPasswordTextField.isHidden = true
         
         nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
-        SetupViews.addViewEndRemoveAutoresizingMask(superView: backgroundView, array: [titleLabel, loginTextField, emailTextField, passwordTextField, repeatPasswordTextField, nextButton])
+        SetupViews.addViewEndRemoveAutoresizingMask(superView: backgroundView, array: [titleLabel, loginTextField, emailTextField, passwordTextField, nextButton])
         setupConstraints()
     }
     
@@ -56,9 +54,6 @@ final class ViewController: UIViewController {
             passwordTextField.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -16),
             passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 16),
             
-            repeatPasswordTextField.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 16),
-            repeatPasswordTextField.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -16),
-            repeatPasswordTextField.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 16),
             
             nextButton.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor, constant: -16),
             nextButton.heightAnchor.constraint(equalToConstant: 50),

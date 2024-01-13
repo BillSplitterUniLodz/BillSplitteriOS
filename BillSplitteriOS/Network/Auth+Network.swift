@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 extension Network {
     func authorization(username:String, email: String, password:String, completion: @escaping (StatusCode) -> ()) {
         
@@ -52,6 +53,22 @@ extension Network {
             case .failure(let error):
                 completion(error)
             }
+        }
+    }
+    
+    func authorizationAF(username:String, email: String, password:String, completion: @escaping (StatusCode) -> ()) {
+        let api = Api.login
+        let login = AuthData(username: username, email: email, password: password)
+        let headers: HTTPHeaders = [
+            .accept("application/json")
+        ]
+        
+        AF.request(api.path, method: .post, parameters: login, encoder: JSONParameterEncoder.default, headers: headers).response { data in
+            guard data.error == nil else {
+                completion(StatusCode(data.error))
+                return
+            }
+            completion(StatusCode(code: data.response?.statusCode ?? 0))
         }
     }
 }

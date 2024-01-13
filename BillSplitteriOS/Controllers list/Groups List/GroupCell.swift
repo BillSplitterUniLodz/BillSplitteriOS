@@ -20,7 +20,7 @@ class GroupCell: UITableViewCell {
     
     private func initialize() {
         SetupViews.addViewEndRemoveAutoresizingMask(superView: contentView, view: label)
-        
+        selectionStyle = .none
         setupConstraints()
     }
     

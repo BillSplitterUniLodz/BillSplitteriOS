@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 extension NSMutableData {
     func appendString(_ string: String) {
         let data = string.data(using: String.Encoding.utf8, allowLossyConversion: true)
@@ -16,7 +17,7 @@ class Network {
     static let shared = Network()
     private init() {}
     func generateBoundaryString() -> String { return "Boundary-" + UUID().uuidString }
-
+    
     struct Parsing:Decodable {let success: Bool?; let message:String?}
     
     private func parsing(_ data:Data) -> String? {
@@ -49,7 +50,7 @@ class Network {
         }
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
- 
+            
             guard let response = response as? HTTPURLResponse, let data = data else { return
                 completion(Result.failure(error: StatusCode(error))) }
             let code = response.statusCode
@@ -60,7 +61,7 @@ class Network {
                 let errorCode = code == 200 ? 400 : code
                 return completion(Result.failure(error: StatusCode(code: errorCode, message: object.message)))
             }
-
+            
             guard let value = try? JSONDecoder().decode(type.self, from: data) else {
                 print("-----------------------")
                 print(api.path)
@@ -84,34 +85,34 @@ class Network {
     
     
     private func finishPush<T: Decodable>(_ token:String? = nil/*AuthApp().token*/,
-                            api:Api,
-                            body:Data?,
-                            headers:[String:String]?,
-                            type: T.Type,
-                            completion:@escaping(Result<T>) -> ())
+                                          api:Api,
+                                          body:Data?,
+                                          headers:[String:String]?,
+                                          type: T.Type,
+                                          completion:@escaping(Result<T>) -> ())
     {
         var request = URLRequest(url: URL(string: api.path)!,timeoutInterval: Double.infinity)
         request.httpMethod = api.method
         request.httpBody = body
         request.timeoutInterval = 10
-       
+        
         if let headers = headers {
             headers.forEach { request.addValue($0.value, forHTTPHeaderField: $0.key) }
         }
         if let token = token {
             request.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
         }
-
+        
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
             guard let response = response as? HTTPURLResponse, let data = data else { return completion(Result.failure(error: StatusCode(error))) }
             let code = response.statusCode
-           
+            
             print(String(data: data, encoding: .utf8)!)
- 
+            
             switch code {
             case 401: return completion(Result.failure(error: StatusCode(code: 401, message: "Your authorization is outdated")))
-            
+                
             case 200...299:
                 if let string = self.parsing(data) {
                     return completion(Result.failure(error: StatusCode(code: 400, message: string)))}

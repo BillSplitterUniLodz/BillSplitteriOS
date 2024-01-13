@@ -8,7 +8,7 @@
 import UIKit
 final class GroupsViewController: UIViewController {
     private lazy var tableView = UITableView()
-    private var items = [GroupModel]()
+    private var items = [GroupModel(id: UUID(), name: "Trip to Wroclaw", participants: [])]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,5 +82,10 @@ extension GroupsViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath) as? GroupCell
         cell?.updateModel(name: items[indexPath.row].name)
         return cell ?? .init()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = TransactionsViewController(group: items[indexPath.row])
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
