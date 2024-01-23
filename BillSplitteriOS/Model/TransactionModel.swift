@@ -10,5 +10,5 @@ struct TransactionModel: Codable {
     let id: UUID
     let amount: Double
     let name: String
-    let participants: [User]
+    let participants: [Participant]
 }

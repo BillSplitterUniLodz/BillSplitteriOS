@@ -6,7 +6,7 @@
 //
 
 import UIKit
-final class TransactionsViewController: UIViewController {
+final class TransactionsViewController: TemplateController {
     private let tableView = UITableView()
     private var items = [
         TransactionModel(id: UUID(), amount: 100.0, name: "Groceries", participants: []),

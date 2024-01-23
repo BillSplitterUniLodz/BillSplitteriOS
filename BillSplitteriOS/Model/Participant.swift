@@ -6,8 +6,10 @@
 //
 
 import Foundation
-struct User: Codable {
-    let id: UUID
+struct Participant: Codable {
+    let created_at: String
+    let updated_at: String
+    let user_uuid: String
     let username: String
     let email: String
 }

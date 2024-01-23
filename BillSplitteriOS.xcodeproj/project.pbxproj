@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B804AFC32B5F461D002B3639 /* TemplateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804AFC22B5F461D002B3639 /* TemplateController.swift */; };
 		B842F2CA2B432EFE00907F0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2C92B432EFE00907F0C /* AppDelegate.swift */; };
 		B842F2CC2B432EFE00907F0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2CB2B432EFE00907F0C /* SceneDelegate.swift */; };
 		B842F2CE2B432EFE00907F0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2CD2B432EFE00907F0C /* ViewController.swift */; };
@@ -29,7 +30,7 @@
 		B842F3012B4344E900907F0C /* Auth+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F3002B4344E900907F0C /* Auth+Network.swift */; };
 		B842F3032B43484B00907F0C /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F3022B43484B00907F0C /* GroupsViewController.swift */; };
 		B842F3052B43550C00907F0C /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F3042B43550C00907F0C /* Group.swift */; };
-		B842F3072B43553700907F0C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F3062B43553700907F0C /* User.swift */; };
+		B842F3072B43553700907F0C /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F3062B43553700907F0C /* Participant.swift */; };
 		B842F3092B4355EE00907F0C /* Groups+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F3082B4355EE00907F0C /* Groups+Network.swift */; };
 		B842F30C2B435BD000907F0C /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F30B2B435BD000907F0C /* GroupCell.swift */; };
 		B842F30F2B435DE800907F0C /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F30E2B435DE800907F0C /* TransactionsViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B804AFC22B5F461D002B3639 /* TemplateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateController.swift; sourceTree = "<group>"; };
 		B842F2C62B432EFE00907F0C /* BillSplitteriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillSplitteriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B842F2C92B432EFE00907F0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B842F2CB2B432EFE00907F0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +65,7 @@
 		B842F3002B4344E900907F0C /* Auth+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Auth+Network.swift"; sourceTree = "<group>"; };
 		B842F3022B43484B00907F0C /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		B842F3042B43550C00907F0C /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
-		B842F3062B43553700907F0C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B842F3062B43553700907F0C /* Participant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
 		B842F3082B4355EE00907F0C /* Groups+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Groups+Network.swift"; sourceTree = "<group>"; };
 		B842F30B2B435BD000907F0C /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		B842F30E2B435DE800907F0C /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				B842F30D2B435DD800907F0C /* Transactions List */,
 				B842F30A2B435B8C00907F0C /* Groups List */,
 				B842F2CD2B432EFE00907F0C /* ViewController.swift */,
+				B804AFC22B5F461D002B3639 /* TemplateController.swift */,
 			);
 			path = "Controllers list";
 			sourceTree = "<group>";
@@ -140,7 +143,7 @@
 			children = (
 				B842F2FE2B4341F400907F0C /* AuthDataModel.swift */,
 				B842F3042B43550C00907F0C /* Group.swift */,
-				B842F3062B43553700907F0C /* User.swift */,
+				B842F3062B43553700907F0C /* Participant.swift */,
 				B842F3102B436CD500907F0C /* TransactionModel.swift */,
 			);
 			path = Model;
@@ -297,6 +300,7 @@
 				B842F2E92B43363100907F0C /* UILabel+Extension.swift in Sources */,
 				B842F2E72B43361000907F0C /* UIColor+Extension.swift in Sources */,
 				B842F2FF2B4341F400907F0C /* AuthDataModel.swift in Sources */,
+				B804AFC32B5F461D002B3639 /* TemplateController.swift in Sources */,
 				B842F30F2B435DE800907F0C /* TransactionsViewController.swift in Sources */,
 				B842F2EB2B43365500907F0C /* UITextField+Extension.swift in Sources */,
 				B842F2F62B43400D00907F0C /* API.swift in Sources */,
@@ -308,7 +312,7 @@
 				B842F3132B436D2B00907F0C /* TransactionCell.swift in Sources */,
 				B842F2CC2B432EFE00907F0C /* SceneDelegate.swift in Sources */,
 				B842F2F12B4336C900907F0C /* UIStackView+Extension.swift in Sources */,
-				B842F3072B43553700907F0C /* User.swift in Sources */,
+				B842F3072B43553700907F0C /* Participant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

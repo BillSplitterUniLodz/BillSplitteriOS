@@ -24,17 +24,17 @@ class AuthApp {
             // remove old entry
             removeToken()
             //save new data
-            defaults.setValue(token, forKey: keyAuth)
+            defaults.setValue(token, forKey: keyToken)
         }
     }
     
     
     //MARK: login end password
-    var autorization: AuthData? {
+    var autorization: AuthUser? {
         get {
             guard let object = defaults.object(forKey: keyAuth) else {return nil}
             guard let data = object as? Data else {return nil}
-            guard let object = try? JSONDecoder().decode(AuthData.self, from: data) else {return nil}
+            guard let object = try? JSONDecoder().decode(AuthUser.self, from: data) else {return nil}
             return object
         }
         set {
@@ -53,11 +53,7 @@ class AuthApp {
     }
     
     //MARK: - Token Action
-    func removeTokens() {
-        defaults.removeObject(forKey: keyToken)
-    }
-    
-    private func removeToken() {
+    func removeToken() {
         defaults.removeObject(forKey: keyToken)
     }
     

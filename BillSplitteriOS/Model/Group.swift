@@ -6,8 +6,10 @@
 //
 
 import Foundation
-struct GroupModel: Codable {
-    let id: UUID
+struct GroupModel: Decodable {
+    let uuid: String
     let name: String
-    let participants: [User]
+    let created_at: String
+    let updated_at: String
+    let participants: [Participant]
 }

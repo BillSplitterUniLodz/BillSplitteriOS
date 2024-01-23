@@ -6,29 +6,26 @@
 //
 
 import Foundation
-
+import Alamofire
 struct Base {
-    static let BASE_URL = "https://"
-}
-
-public enum HTTPMethod: String {
-    case get    = "GET"
-    case post   = "POST"
-    case put    = "PUT"
-    case delete = "DELETE"
+    static let BASE_URL = "http://localhost:3000/"
 }
 
 enum Api {
     
-    case login
+    case signUp
+    case groups
+    case createGroup
+    case joinGroup
+    case signIn
     
     //MARK: - METHOD
-    var method: String {
+    var method: HTTPMethod {
         switch self {
-        case .login:
-            return HTTPMethod.post.rawValue
+        case .signUp, .createGroup, .joinGroup, .signIn:
+            return .post
         default:
-            return HTTPMethod.get.rawValue
+            return .get
         }
     }
     
@@ -36,10 +33,13 @@ enum Api {
     var path:String {
         
         get {
-            var baseURL:String {return Base.BASE_URL}
+            var baseURL:String {return Base.BASE_URL }
             switch self {
-            default:
-                return baseURL
+            case .createGroup: return baseURL + "groups"
+            case .signUp: return baseURL + "sign_up"
+            case .groups: return baseURL + "groups"
+            case .joinGroup: return baseURL + "groups/process_invite"
+            case .signIn: return baseURL + "signin"
             }
         }
         
