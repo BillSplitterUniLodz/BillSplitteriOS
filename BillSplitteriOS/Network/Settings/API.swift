@@ -18,11 +18,12 @@ enum Api {
     case createGroup
     case joinGroup
     case signIn
+    case generateInvitation(id: String)
     
     //MARK: - METHOD
     var method: HTTPMethod {
         switch self {
-        case .signUp, .createGroup, .joinGroup, .signIn:
+        case .signUp, .createGroup, .joinGroup, .signIn, .generateInvitation:
             return .post
         default:
             return .get
@@ -40,6 +41,7 @@ enum Api {
             case .groups: return baseURL + "groups"
             case .joinGroup: return baseURL + "groups/process_invite"
             case .signIn: return baseURL + "signin"
+            case let .generateInvitation(id): return baseURL + "groups/\(id)" + "/generate_invite"
             }
         }
         

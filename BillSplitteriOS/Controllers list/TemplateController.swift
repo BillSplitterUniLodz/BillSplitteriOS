@@ -69,6 +69,21 @@ class TemplateController: UIViewController {
         alert.addAction(addAction)
         self.present(alert, animated: true)
     }
+    
+    func creatAlertWithCopyFunction(title: String, text: String) {
+        let alert = UIAlertController(title: title, message: text, preferredStyle: .alert)
+        
+        let copyAction = UIAlertAction(title: "Copy", style: .default) { action in
+            UIPasteboard.general.string = text
+            action.setValue("Copied", forKey: "title")
+        }
+        
+        
+//        let cancelAction = UIAlertAction(title: "Ok", style: .cancel)
+//        alert.addAction(cancelAction)
+        alert.addAction(copyAction)
+        self.present(alert, animated: true)
+    }
 }
 
 

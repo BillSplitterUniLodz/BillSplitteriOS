@@ -80,10 +80,10 @@ extension Network {
         struct JoinToken: Encodable {
             let token: String
         }
-        let body = JoinToken(token: authToken)
+        let body = JoinToken(token: token)
         
         let headers: HTTPHeaders = [
-            .authorization(bearerToken: token)
+            .authorization(bearerToken: authToken)
         ]
         
         AF.request(api.path, method: api.method, parameters: body, headers: headers)
@@ -102,6 +102,36 @@ extension Network {
                     completion(StatusCode(NSError(domain: "Cannot parse data", code: 0)), nil)
                 }
                 
+            }
+    }
+    
+    func generateInviteLink(groupId: String, completion: @escaping (StatusCode, String?) -> ()) {
+        let api = Api.generateInvitation(id: groupId)
+        let authToken = AuthApp.shared.token ?? ""
+        
+        let headers: HTTPHeaders = [
+            .authorization(bearerToken: authToken)
+        ]
+        
+        struct ResponseModel: Decodable {
+            let token: String
+        }
+        
+        AF.request(api.path, method: api.method, headers: headers)
+            .response { response in
+                guard response.error == nil, let data = response.data else {
+                    completion(StatusCode(response.error), nil)
+                    return
+                }
+                if !Network.checkForAuth(data: data) {
+                    completion(StatusCode(code: 0, message: "Auth requested!"), nil)
+                    return
+                }
+                if let decodedData = try? JSONDecoder().decode(ResponseModel.self, from: data) {
+                    completion(StatusCode(code: response.response?.statusCode ?? 0), decodedData.token)
+                }else {
+                    completion(StatusCode(NSError(domain: "Cannot parse data", code: 0)), nil)
+                }
             }
     }
 }
