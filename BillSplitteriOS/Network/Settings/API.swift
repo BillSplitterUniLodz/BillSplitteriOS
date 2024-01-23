@@ -19,14 +19,21 @@ enum Api {
     case joinGroup
     case signIn
     case generateInvitation(id: String)
+    case createExpense(groupId: String)
+    case getGeneralStats(groupId: String)
+    case getExpenses(groupId: String)
+    case deleteGroup(id: String)
     
     //MARK: - METHOD
     var method: HTTPMethod {
         switch self {
-        case .signUp, .createGroup, .joinGroup, .signIn, .generateInvitation:
+        case .signUp, .createGroup, .joinGroup, .signIn, .generateInvitation, .createExpense:
             return .post
-        default:
+        
+        case .groups, .getGeneralStats, .getExpenses:
             return .get
+        case .deleteGroup:
+            return .delete
         }
     }
     
@@ -42,11 +49,11 @@ enum Api {
             case .joinGroup: return baseURL + "groups/process_invite"
             case .signIn: return baseURL + "signin"
             case let .generateInvitation(id): return baseURL + "groups/\(id)" + "/generate_invite"
+            case let .createExpense(groupId): return baseURL + "groups/\(groupId)/expenses/"
+            case .getGeneralStats(groupId: let groupId): return baseURL + "groups/\(groupId)/expenses/stats"
+            case .getExpenses(groupId: let groupId): return baseURL + "groups/\(groupId)/expenses/"
+            case .deleteGroup(id: let id): return baseURL + "groups/\(id)"
             }
-        }
-        
-        set {
-            
         }
     }
 }

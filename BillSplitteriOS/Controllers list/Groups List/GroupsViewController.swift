@@ -42,7 +42,7 @@ final class GroupsViewController: TemplateController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(GroupCell.self, forCellReuseIdentifier: "GroupCell")
-        tableView.rowHeight = 50
+        tableView.rowHeight = 60
         SetupViews.addViewEndRemoveAutoresizingMask(superView: view, view: tableView)
         
         logoutButton.setTitle("Log out", for: .normal)
@@ -142,5 +142,28 @@ extension GroupsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = TransactionsViewController(group: items[indexPath.row])
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let model = items[indexPath.row]
+        let item = UIContextualAction(style: .destructive, title: "Delete") { [weak self] _, _, _ in
+            Network.shared.deleteWholeGroup(id: model.uuid) { [weak self] statusCode in
+                switch statusCode.code {
+                case 200:
+                    DispatchQueue.main.async {
+                        self?.items.remove(at: indexPath.row)
+                        self?.tableView.deleteRows(at: [indexPath], with: .fade)
+                    }
+                default:
+                    self?.alert(error: statusCode, action: nil)
+                }
+            }
+        }
+        
+        item.image = UIImage(systemName: "trash.fill")
+        
+        let swipeActions = UISwipeActionsConfiguration(actions: [item])
+        
+        return swipeActions
     }
 }

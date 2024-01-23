@@ -3,4 +3,54 @@
    uuid = "020D115A-F35C-4C86-A90C-339BAC8E2F4B"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F570EA16-BF09-4ABA-B558-308C7930940F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BillSplitteriOS/Network/Expenses+Network.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "getExpenses(for:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F570EA16-BF09-4ABA-B558-308C7930940F - 542a9fc125d10a54"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in BillSplitteriOS.Network.getExpenses(for: Swift.String, completion: (BillSplitteriOS.StatusCode, Swift.Optional&lt;Swift.Array&lt;BillSplitteriOS.ExpenseModel&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "BillSplitteriOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temur/Documents/Development/BillSplitteriOS/BillSplitteriOS/Network/Expenses+Network.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "1080">
+               </Location>
+               <Location
+                  uuid = "F570EA16-BF09-4ABA-B558-308C7930940F - 542a9fc125d10a54"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in BillSplitteriOS.Network.getExpenses(for: Swift.String, completion: (BillSplitteriOS.StatusCode, Swift.Optional&lt;Swift.Array&lt;BillSplitteriOS.ExpenseModel&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "BillSplitteriOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temur/Documents/Development/BillSplitteriOS/BillSplitteriOS/Network/Expenses+Network.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "876">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

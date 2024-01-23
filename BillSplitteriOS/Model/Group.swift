@@ -13,3 +13,8 @@ struct GroupModel: Decodable {
     let updated_at: String
     let participants: [Participant]
 }
+
+struct GroupExpenses: Decodable {
+    let group: [GroupModel]
+    let expenses: [ExpenseModel]
+}

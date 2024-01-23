@@ -8,10 +8,7 @@
 import UIKit
 final class TransactionsViewController: TemplateController {
     private let tableView = UITableView()
-    private var items = [
-        TransactionModel(id: UUID(), amount: 100.0, name: "Groceries", participants: []),
-        TransactionModel(id: UUID(), amount: 236.79, name: "Hostel", participants: [])
-    ]
+    private var items = [ExpenseModel]()
     private let calculateButton = UIButton()
     private let inviteButton = UIButton()
     
@@ -32,6 +29,22 @@ final class TransactionsViewController: TemplateController {
         self.view.backgroundColor = .systemBackground
         self.navigationController?.navigationBar.prefersLargeTitles = true
         initialize()
+    }
+    
+    override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+        
+        Network.shared.getExpenses(for: group.uuid) { [weak self] statusCode, groupExpenses in
+            guard let self else { return }
+            guard let groupExpenses else {
+                self.alert(error: statusCode, action: nil)
+                return
+            }
+            DispatchQueue.main.async {
+                self.items = groupExpenses
+                self.tableView.reloadData()
+            }
+        }
     }
     
     private func initialize() {
@@ -81,7 +94,16 @@ final class TransactionsViewController: TemplateController {
     }
     
     @objc private func calculate() {
-        
+        Network.shared.calculate(groupId: group.uuid) { [weak self] statusCode, statsModel in
+            guard let self else { return }
+            guard let statsModel else {
+                self.alert(error: statusCode, action: nil)
+                return
+            }
+            print(statsModel)
+            let vc = DebtsViewController(stats: statsModel)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @objc private func invite() {
@@ -97,8 +119,15 @@ final class TransactionsViewController: TemplateController {
     }
     
     @objc private func plusBarButtonAction() {
-        let vc = UIViewController()
+        let vc = AddTransactionViewController(group: group)
         vc.view.backgroundColor = .systemBackground
+        vc.onAddAction = { [weak self] expense, owner in
+            guard let self else { return }
+            DispatchQueue.main.async {
+                self.items.append(expense)
+                self.tableView.reloadData()
+            }
+        }
         self.present(vc, animated: true)
     }
 }
@@ -110,7 +139,8 @@ extension TransactionsViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? TransactionCell
-        cell?.updateModel(transaction: items[indexPath.row])
+        let model = items[indexPath.row]
+        cell?.updateModel(expense: model)
         return cell ?? .init()
     }
     

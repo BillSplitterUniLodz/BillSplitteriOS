@@ -30,9 +30,7 @@ struct Body: Decodable {
     let token: String
 }
 
-//struct AuthToken:Decodable {
-//    let success: Bool
-//    let message: String?
-//    let body: Body?
-//    let code: Int
-//}
+struct UserData: Codable {
+    let username: String
+    let email: String?
+}

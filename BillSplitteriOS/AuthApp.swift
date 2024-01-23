@@ -30,11 +30,11 @@ class AuthApp {
     
     
     //MARK: login end password
-    var autorization: AuthUser? {
+    var autorization: UserData? {
         get {
             guard let object = defaults.object(forKey: keyAuth) else {return nil}
             guard let data = object as? Data else {return nil}
-            guard let object = try? JSONDecoder().decode(AuthUser.self, from: data) else {return nil}
+            guard let object = try? JSONDecoder().decode(UserData.self, from: data) else {return nil}
             return object
         }
         set {

@@ -22,6 +22,7 @@ extension Network {
             }
             if let decodedData = try? JSONDecoder().decode(AuthResponseBody.self, from: body) {
                 AuthApp.shared.token = decodedData.jwt_token
+                AuthApp.shared.autorization = UserData(username: username, email: email)
                 completion(StatusCode(code: data.response?.statusCode ?? 0), decodedData.jwt_token)
             }else {
                 completion(StatusCode(NSError(domain: "Cannot parse data", code: 0)), nil)
@@ -52,6 +53,7 @@ extension Network {
                 
                 if let decodedData = try? JSONDecoder().decode(AuthResponseBody.self, from: body) {
                     AuthApp.shared.token = decodedData.jwt_token
+                    AuthApp.shared.autorization = UserData(username: username, email: nil)
                     completion(StatusCode(code: response.response?.statusCode ?? 0), decodedData.jwt_token)
                 }else {
                     completion(StatusCode(NSError(domain: "Cannot parse data", code: 0)), nil)

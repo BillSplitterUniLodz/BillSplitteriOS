@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B804AFC32B5F461D002B3639 /* TemplateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804AFC22B5F461D002B3639 /* TemplateController.swift */; };
+		B81ADC1E2B5FC52C0085F80F /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81ADC1D2B5FC52C0085F80F /* AddTransactionViewController.swift */; };
+		B81ADC212B5FCCA60085F80F /* Expenses+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81ADC202B5FCCA60085F80F /* Expenses+Network.swift */; };
+		B81ADC232B5FF0BE0085F80F /* StatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81ADC222B5FF0BE0085F80F /* StatsModel.swift */; };
+		B81ADC252B5FF3090085F80F /* DebtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81ADC242B5FF3090085F80F /* DebtsViewController.swift */; };
 		B842F2CA2B432EFE00907F0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2C92B432EFE00907F0C /* AppDelegate.swift */; };
 		B842F2CC2B432EFE00907F0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2CB2B432EFE00907F0C /* SceneDelegate.swift */; };
 		B842F2CE2B432EFE00907F0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F2CD2B432EFE00907F0C /* ViewController.swift */; };
@@ -34,13 +38,17 @@
 		B842F3092B4355EE00907F0C /* Groups+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F3082B4355EE00907F0C /* Groups+Network.swift */; };
 		B842F30C2B435BD000907F0C /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F30B2B435BD000907F0C /* GroupCell.swift */; };
 		B842F30F2B435DE800907F0C /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F30E2B435DE800907F0C /* TransactionsViewController.swift */; };
-		B842F3112B436CD500907F0C /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F3102B436CD500907F0C /* TransactionModel.swift */; };
+		B842F3112B436CD500907F0C /* ExpenseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F3102B436CD500907F0C /* ExpenseModel.swift */; };
 		B842F3132B436D2B00907F0C /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842F3122B436D2B00907F0C /* TransactionCell.swift */; };
 		B89665902B52D4130029ABBA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B896658F2B52D4130029ABBA /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B804AFC22B5F461D002B3639 /* TemplateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateController.swift; sourceTree = "<group>"; };
+		B81ADC1D2B5FC52C0085F80F /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
+		B81ADC202B5FCCA60085F80F /* Expenses+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Expenses+Network.swift"; sourceTree = "<group>"; };
+		B81ADC222B5FF0BE0085F80F /* StatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsModel.swift; sourceTree = "<group>"; };
+		B81ADC242B5FF3090085F80F /* DebtsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtsViewController.swift; sourceTree = "<group>"; };
 		B842F2C62B432EFE00907F0C /* BillSplitteriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillSplitteriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B842F2C92B432EFE00907F0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B842F2CB2B432EFE00907F0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +77,7 @@
 		B842F3082B4355EE00907F0C /* Groups+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Groups+Network.swift"; sourceTree = "<group>"; };
 		B842F30B2B435BD000907F0C /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		B842F30E2B435DE800907F0C /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
-		B842F3102B436CD500907F0C /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		B842F3102B436CD500907F0C /* ExpenseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseModel.swift; sourceTree = "<group>"; };
 		B842F3122B436D2B00907F0C /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +93,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B81ADC1F2B5FC8D40085F80F /* SignUp List */ = {
+			isa = PBXGroup;
+			children = (
+				B842F2CD2B432EFE00907F0C /* ViewController.swift */,
+			);
+			path = "SignUp List";
+			sourceTree = "<group>";
+		};
+		B81ADC262B5FF33D0085F80F /* Debts List */ = {
+			isa = PBXGroup;
+			children = (
+				B81ADC242B5FF3090085F80F /* DebtsViewController.swift */,
+			);
+			path = "Debts List";
+			sourceTree = "<group>";
+		};
 		B842F2BD2B432EFE00907F0C = {
 			isa = PBXGroup;
 			children = (
@@ -130,9 +154,10 @@
 		B842F2DE2B43331400907F0C /* Controllers list */ = {
 			isa = PBXGroup;
 			children = (
+				B81ADC262B5FF33D0085F80F /* Debts List */,
+				B81ADC1F2B5FC8D40085F80F /* SignUp List */,
 				B842F30D2B435DD800907F0C /* Transactions List */,
 				B842F30A2B435B8C00907F0C /* Groups List */,
-				B842F2CD2B432EFE00907F0C /* ViewController.swift */,
 				B804AFC22B5F461D002B3639 /* TemplateController.swift */,
 			);
 			path = "Controllers list";
@@ -144,7 +169,8 @@
 				B842F2FE2B4341F400907F0C /* AuthDataModel.swift */,
 				B842F3042B43550C00907F0C /* Group.swift */,
 				B842F3062B43553700907F0C /* Participant.swift */,
-				B842F3102B436CD500907F0C /* TransactionModel.swift */,
+				B842F3102B436CD500907F0C /* ExpenseModel.swift */,
+				B81ADC222B5FF0BE0085F80F /* StatsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,6 +204,7 @@
 				B842F2F32B433FAD00907F0C /* Network.swift */,
 				B842F3002B4344E900907F0C /* Auth+Network.swift */,
 				B842F3082B4355EE00907F0C /* Groups+Network.swift */,
+				B81ADC202B5FCCA60085F80F /* Expenses+Network.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -206,6 +233,7 @@
 			children = (
 				B842F30E2B435DE800907F0C /* TransactionsViewController.swift */,
 				B842F3122B436D2B00907F0C /* TransactionCell.swift */,
+				B81ADC1D2B5FC52C0085F80F /* AddTransactionViewController.swift */,
 			);
 			path = "Transactions List";
 			sourceTree = "<group>";
@@ -302,17 +330,21 @@
 				B842F2FF2B4341F400907F0C /* AuthDataModel.swift in Sources */,
 				B804AFC32B5F461D002B3639 /* TemplateController.swift in Sources */,
 				B842F30F2B435DE800907F0C /* TransactionsViewController.swift in Sources */,
+				B81ADC212B5FCCA60085F80F /* Expenses+Network.swift in Sources */,
 				B842F2EB2B43365500907F0C /* UITextField+Extension.swift in Sources */,
 				B842F2F62B43400D00907F0C /* API.swift in Sources */,
 				B842F2E52B4333FD00907F0C /* UIView+Extension.swift in Sources */,
+				B81ADC1E2B5FC52C0085F80F /* AddTransactionViewController.swift in Sources */,
 				B842F2FD2B43418200907F0C /* AuthApp.swift in Sources */,
 				B842F2FB2B43406700907F0C /* StatusCode.swift in Sources */,
-				B842F3112B436CD500907F0C /* TransactionModel.swift in Sources */,
+				B842F3112B436CD500907F0C /* ExpenseModel.swift in Sources */,
 				B842F2ED2B43367100907F0C /* SetupViews.swift in Sources */,
 				B842F3132B436D2B00907F0C /* TransactionCell.swift in Sources */,
 				B842F2CC2B432EFE00907F0C /* SceneDelegate.swift in Sources */,
+				B81ADC252B5FF3090085F80F /* DebtsViewController.swift in Sources */,
 				B842F2F12B4336C900907F0C /* UIStackView+Extension.swift in Sources */,
 				B842F3072B43553700907F0C /* Participant.swift in Sources */,
+				B81ADC232B5FF0BE0085F80F /* StatsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +495,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -490,6 +523,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

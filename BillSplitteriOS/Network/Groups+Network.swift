@@ -105,6 +105,23 @@ extension Network {
             }
     }
     
+    func deleteWholeGroup(id: String, completion: @escaping (StatusCode) -> ()) {
+        let api = Api.deleteGroup(id: id)
+        let token = AuthApp.shared.token ?? ""
+        let headers: HTTPHeaders = [
+            .authorization(bearerToken: token)
+        ]
+        
+        AF.request(api.path, method: api.method, headers: headers)
+            .response { response in
+                guard response.error == nil else {
+                    completion(StatusCode(response.error))
+                    return
+                }
+                completion(StatusCode(code: 200))
+            }
+    }
+     
     func generateInviteLink(groupId: String, completion: @escaping (StatusCode, String?) -> ()) {
         let api = Api.generateInvitation(id: groupId)
         let authToken = AuthApp.shared.token ?? ""
